@@ -49,7 +49,7 @@ public class Converter {
 				outFile.getParentFile().mkdirs();
 				FileUtils.writeByteArrayToFile(outFile, data);
 			} else if(isMovie.test(zipEntry)) {
-				File outFile = new File(outputFolder, zipEntry.getName().replace(".sdt", ".mov"));
+				File outFile = new File(outputFolder, zipEntry.getName().replace(".sdt", ".mp4"));
 				outFile.getParentFile().mkdirs();
 				data = Utils.unscrambleHeader(data);
 				FileUtils.writeByteArrayToFile(outFile, data);
